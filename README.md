@@ -10,10 +10,13 @@
 
 1. Google Home に「いただきます」と発声する
 2. IFTTT のフックでPushbulletで「いただきます」という文字を送信する  
-![IFTTT のフック](https://i.imgur.com/0MsxrEq.png)
-3. EventGhost のフックでウェブカメラで机の上を撮影し、このリポジトリの `main.js` を実行する  
-![EventGhost のフック](https://i.imgur.com/QYdqf0n.png)
-4. 保存先から最も新しい写真をアップロードし、ハッシュタグをつけて投稿する
+    ![IFTTT のフック](https://i.imgur.com/0MsxrEq.png)
+3. EventGhost のフックでウェブカメラで机の上を撮影し、このリポジトリの `main.js` を実行する
+    ```
+    cd /d C:\Users\Eai\Documents\git\eai-gohan-post && node --require dotenv/config main.js
+    ```
+    ![EventGhost のフック](https://i.imgur.com/0Pj9fla.png)
+4. 保存先から最も新しい写真を180度回転してからアップロードし、ハッシュタグをつけて投稿する
 
 ## つかったもの
 

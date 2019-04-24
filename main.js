@@ -4,14 +4,9 @@ const path = require("path");
 const glob = require("glob");
 const child_process = require("child_process");
 
-const credential = {
-    host: "stellaria.network",
-    token: "xxx"
-};
-
 const M = new Mastodon({
-    access_token: credential.token,
-    api_url: `https://${credential.host}/api/v1/`
+    access_token: process.env.MASTODON_TOKEN,
+    api_url: `https://${process.env.MASTODON_HOST}/api/v1/`
 });
 
 const filepath = getLatestFile("C:\\Users\\Eai\\webcam", "jpg");
