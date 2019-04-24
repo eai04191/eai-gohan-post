@@ -2,6 +2,7 @@ const Mastodon = require("mastodon-api");
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
+const child_process = require("child_process");
 
 const credential = {
     host: "stellaria.network",
@@ -14,6 +15,7 @@ const M = new Mastodon({
 });
 
 const filepath = getLatestFile("C:\\Users\\Eai\\webcam", "jpg");
+rotate(filepath);
 
 M.post("media", { file: fs.createReadStream(filepath) }).then(resp => {
     const id = resp.data.id;
@@ -33,4 +35,8 @@ function getLatestFile(dir, ext) {
     });
 
     return sortedFileList[0];
+}
+
+function rotate(filepath) {
+    child_process.execSync("mogrify -rotate 180 " + filepath);
 }
