@@ -1,5 +1,7 @@
 # eai-gohan-post
 
+![](https://i.imgur.com/HxjaLKB.jpg)
+
 ## これはなに
 
 [#えあいさんちの今日のごはん](https://stellaria.network/tags/%E3%81%88%E3%81%82%E3%81%84%E3%81%95%E3%82%93%E3%81%A1%E3%81%AE%E4%BB%8A%E6%97%A5%E3%81%AE%E3%81%94%E3%81%AF%E3%82%93) を自動で投稿するためのスクリプトです。
